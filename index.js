@@ -16,7 +16,7 @@ async function main(app){
 	// Create a database instance: 
 	var db = await maxmind.open('./GeoLite2-City.mmdb'); 
 	// Fire up our app: 
-	app.listen(5000, function () {
+	app.listen(PORT, function () {
 	  console.log('Example app listening on port 5000!')
 	})
 

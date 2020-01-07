@@ -8,10 +8,11 @@ async function main(){
   // encoded: 
 	ip = encodeURIComponent(ip); 
 	// url: 
-	let baseURL = "http://10.0.0.201:5000/ip/"; 
+	let baseURL = "https://blooming-stream-19964.herokuapp.com/ip/"; 
 	let fetchURL = baseURL + ip; 
 	console.log(fetchURL)
 	let ipData = await fetch(fetchURL); 
+	console.log(ipData)
 	let ipjson = await ipData.json(); 
 	console.log(ipjson)
 } 
