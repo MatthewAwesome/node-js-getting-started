@@ -7,6 +7,12 @@ var app_var = express();
 var bodyParser = require('body-parser')
 // Tell the app to user body parser on incoming json objects (they will be stringified therefore need parsing). 
 app_var.use(bodyParser.json()); // for parsing application/json
+app_var.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
+    next();
+});
 
 // for the geoip: 
 

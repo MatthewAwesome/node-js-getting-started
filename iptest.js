@@ -12,7 +12,6 @@ async function main(){
 	let fetchURL = baseURL + ip; 
 	console.log(fetchURL)
 	let ipData = await fetch(fetchURL); 
-	console.log(ipData)
 	let ipjson = await ipData.json(); 
 	console.log(ipjson)
 } 
